@@ -1,0 +1,27 @@
+.wrapper {
+  flex: 1;
+  max-width: var(--width-search);
+}
+
+.input {
+  width: 100%;
+  height: var(--size-button);
+  padding: var(--space-3) var(--space-5);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-strong);
+  color: var(--color-text);
+  font-size: var(--text-body);
+  line-height: 1;
+}
+
+.input::placeholder {
+  color: var(--color-placeholder);
+}
+
+@media (max-width: 639.98px) {
+  .wrapper {
+    max-width: none;
+    width: 100%;
+  }
+}

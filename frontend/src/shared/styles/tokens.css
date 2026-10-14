@@ -1,0 +1,101 @@
+:root {
+  /* Cores — tema claro (padrão) */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-strong: #eef0f3;
+  --color-text: #0a0b0d;
+  --color-text-soft: #5b616e;
+  --color-border: #dee1e6;
+  --color-border-control: #7c828a;
+  --color-primary: #0052ff;
+  --color-primary-active: #003ecc;
+  --color-primary-disabled: #a8b8cc;
+  --color-on-primary: #ffffff;
+  --color-danger: #cf202f;
+  --color-success: #05b169;
+  --color-backdrop: rgba(10, 11, 13, 0.5);
+  --color-placeholder: var(--color-text-soft);
+
+  /* Botão secundário */
+  --button-secondary-bg: var(--color-surface-strong);
+  --button-secondary-border: transparent;
+  --button-secondary-text: var(--color-text);
+  --button-secondary-active-bg: var(--color-border);
+
+  /* Tipografia */
+  --font-sans: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --text-h1: clamp(28px, 2.5vw + 16px, 32px);
+  --text-title: 18px;
+  --text-body: 16px;
+  --text-label: 14px;
+  --text-small: 13px;
+  --text-micro: 12px;
+  --leading-h1: 1.13;
+  --leading-body: 24px;
+  --leading-label: 20px;
+  --leading-small: 20px;
+  --tracking-h1: -0.4px;
+
+  /* Espaçamento */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 48px;
+  --space-control-y: 14px;
+
+  /* Dimensões */
+  --size-nav: 64px;
+  --size-button: 44px;
+  --size-control: 48px;
+  --size-row: 56px;
+  --size-line: 24px;
+  --size-accent-line: 2px;
+  --size-flash-accent: 4px;
+  --width-container: 1200px;
+  --width-form: 640px;
+  --width-dialog: 480px;
+  --width-search: 360px;
+
+  /* Arredondamentos */
+  --radius-control: 12px;
+  --radius-card: 24px;
+  --radius-pill: 100px;
+  --radius-skeleton: 8px;
+
+  /* Sombra */
+  --shadow-overlay: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0a0b0d;
+    --color-surface: #16181c;
+    --color-surface-strong: #5b616e;
+    --color-text: #ffffff;
+    --color-text-soft: #a8acb3;
+    --color-border: #5b616e;
+    --color-border-control: #7c828a;
+    --color-primary: #0052ff;
+    --color-primary-active: #003ecc;
+    --color-primary-disabled: #a8b8cc;
+    --color-on-primary: #ffffff;
+    --color-danger: #ff5c69;
+    --color-success: #05b169;
+    --color-backdrop: rgba(10, 11, 13, 0.7);
+    /* #a8acb3 sobre #5b616e não atinge 4.5:1; placeholder usa o texto principal */
+    --color-placeholder: var(--color-text);
+
+    /* button-outline-on-dark */
+    --button-secondary-bg: transparent;
+    --button-secondary-border: #ffffff;
+    --button-secondary-text: #ffffff;
+    --button-secondary-active-bg: var(--color-surface-strong);
+
+    --shadow-overlay: none;
+  }
+}

@@ -1,0 +1,23 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  composes: skeleton from './TableSkeleton.module.css';
+  width: 25%;
+  height: var(--leading-label);
+}
+
+.control {
+  composes: skeleton from './TableSkeleton.module.css';
+  width: 100%;
+  height: var(--size-control);
+}
+
+.button {
+  composes: skeleton from './TableSkeleton.module.css';
+  width: 25%;
+  height: var(--size-button);
+}

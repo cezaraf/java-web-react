@@ -1,0 +1,121 @@
+/* Estilos compartilhados por GrupoTable, ExameTable e TableSkeleton. */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  height: var(--size-button);
+  padding: 0 var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-soft);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  min-height: var(--size-button);
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.table td {
+  height: var(--size-row);
+  padding: var(--space-4) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+/* Botões de 44px cabem na linha de 56px. */
+.table td.actions {
+  padding-block: var(--space-1);
+  white-space: nowrap;
+}
+
+.actionButtons {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-strong);
+  font-size: var(--text-micro);
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Abaixo de 640px a tabela vira lista empilhada. */
+@media (max-width: 639.98px) {
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+  }
+
+  .table thead tr {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .table th {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    border: 0;
+  }
+
+  .table th.actionsHead {
+    display: none;
+  }
+
+  .table tbody tr {
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .table td {
+    height: auto;
+    padding: 0;
+    border: 0;
+    line-height: var(--leading-body);
+  }
+
+  .table td + td {
+    margin-top: var(--space-1);
+  }
+
+  .table td[data-label]::before {
+    content: attr(data-label) ': ';
+    color: var(--color-text-soft);
+    font-family: var(--font-sans);
+    font-weight: 400;
+  }
+
+  .table td.actions {
+    margin-top: var(--space-3);
+    padding: 0;
+  }
+}

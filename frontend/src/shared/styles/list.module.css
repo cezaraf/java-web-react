@@ -1,0 +1,15 @@
+/* Barra de ferramentas das listagens (busca + filtros). */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+@media (max-width: 639.98px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

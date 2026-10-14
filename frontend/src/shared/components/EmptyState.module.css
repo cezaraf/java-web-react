@@ -1,0 +1,7 @@
+.state {
+  composes: state from './ErrorState.module.css';
+}
+
+.message {
+  composes: message from './ErrorState.module.css';
+}

@@ -1,0 +1,15 @@
+.field {
+  composes: field from './TextField.module.css';
+}
+
+.label {
+  composes: label from './TextField.module.css';
+}
+
+.control {
+  composes: control from './TextField.module.css';
+}
+
+.error {
+  composes: error from './TextField.module.css';
+}

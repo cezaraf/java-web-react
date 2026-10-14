@@ -1,0 +1,25 @@
+.skeleton {
+  display: block;
+  width: 60%;
+  height: var(--size-line);
+  border-radius: var(--radius-skeleton);
+  background: var(--color-surface-strong);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.skeletonActions {
+  composes: skeleton;
+  height: var(--size-button);
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+  }
+}

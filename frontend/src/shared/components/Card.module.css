@@ -1,0 +1,16 @@
+.card {
+  padding: var(--space-7);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.narrow {
+  max-width: var(--width-form);
+}
+
+@media (max-width: 639.98px) {
+  .card {
+    padding: var(--space-4);
+  }
+}

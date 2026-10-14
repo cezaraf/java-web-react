@@ -1,0 +1,19 @@
+.state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-7);
+  text-align: center;
+}
+
+.message {
+  font-size: var(--text-body);
+  color: var(--color-text);
+}
+
+@media (max-width: 639.98px) {
+  .state {
+    padding: var(--space-7) var(--space-4);
+  }
+}
